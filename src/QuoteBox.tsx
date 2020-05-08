@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function QuoteBox() {
+export function QuoteBox() {
   const [quote, setQuote] = useState({
     content: 'Loading...',
     author: '',
@@ -25,17 +25,21 @@ function QuoteBox() {
   const tweetLink = `https://twitter.com/intent/tweet?text=${encodedUriText}`;
 
   return (
-    <div id="quote-box">
-      <div id="text">{content}</div>
-      <div id="author">{author}</div>
-      <button id="new-quote" onClick={fetchAndUseQuote}>
-        New Quote
-      </button>
-      <a href={tweetLink} id="tweet-quote" target="_blank" rel="noopener noreferrer">
-        Tweet
-      </a>
+    <div id="quote-box" className="container">
+      <blockquote>
+        <div id="text" className="content">
+          {content}
+        </div>
+        <div id="author">{author}</div>
+      </blockquote>
+      <div className="buttons">
+        <button id="new-quote" onClick={fetchAndUseQuote} className="button">
+          New Quote
+        </button>
+        <a href={tweetLink} id="tweet-quote" target="_blank" rel="noopener noreferrer" className="button">
+          Tweet
+        </a>
+      </div>
     </div>
   );
 }
-
-export default QuoteBox;
