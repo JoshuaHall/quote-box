@@ -1,5 +1,5 @@
 {
-  "name": "quote-box-hooks",
+  "name": "quote-box",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-prettier": "^1.1.2"
   }
 }
