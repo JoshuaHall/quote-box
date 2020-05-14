@@ -25,7 +25,7 @@ export function QuoteBox() {
   const tweetLink = `https://twitter.com/intent/tweet?text=${encodedUriText}`;
 
   return (
-    <div id="quote-box" className="container">
+    <div id="quote-box">
       <blockquote>
         <div id="text" className="content">
           {content}
