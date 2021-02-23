@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function QuoteBox() {
+export function QuoteBox(): JSX.Element {
   const [quote, setQuote] = useState({
     content: 'Loading...',
     author: '',
